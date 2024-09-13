@@ -1,0 +1,49 @@
+# Ignore the file itself
+
+# Ignore build and development artifacts
+/build/
+/install/
+/log/
+/.vscode/
+/.idea/
+/.clangd/
+/.pytest_cache/
+/.cargo/
+/CMakeLists.txt.user
+
+# Ignore ROS build and installation artifacts
+src/cgss_ws/install/
+src/cgss_ws/build/
+src/cgss_ws/log/
+src/cyclonedds_ws/
+
+# Ignore generated documentation
+/doc/build/
+/doc/html/
+
+# Ignore compiled binaries and libraries
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.exe
+
+# Ignore generated files by CMake
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+
+# Ignore generated files by Cargo
+/target/
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db

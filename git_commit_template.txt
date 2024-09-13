@@ -1,0 +1,15 @@
+# Commit Summary
+
+A brief description of the changes introduced in this commit.
+
+## Changes Made
+
+- List of changes made, including file modifications, additions, deletions, etc.
+
+## Issues Resolved
+
+- List any issues or tickets resolved by this commit.
+
+## Notes
+
+- Additional notes or context about the changes, if necessary.
