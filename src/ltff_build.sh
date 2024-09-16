@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ################################################################################
-# Script name: cgss_build.sh
-# Description: This script builds or cleans the Canine Guard project 
-# Usage: ./cgss_build.sh [--clean]
+# Script name: LTFF_build.sh
+# Description: This script builds or cleans the LTFF project 
+# Usage: ./LTFF_build.sh [--clean]
 ################################################################################
 
 CLEAN_PARAM="--clean"
@@ -28,14 +28,14 @@ build() {
     source "/opt/ros/$ROS_DISTRO/setup.bash"
     source "$CYCLONE_WS/install/setup.bash"
 
-    echo ">>> Building cgss workspace packages..."
-    cd "$CGSS_WS"
+    # echo ">>> Building ltff workspace packages..."
+    # cd "$LTFF_WS"
 
-    # Install dependencies for the Canine Guard project
-    rosdep install --from-paths src --ignore-src -r -y
+    # # Install dependencies for the LTFF project
+    # rosdep install --from-paths src --ignore-src -r -y
 
-    # Build the Canine Guard project
-    colcon build
+    # # Build the LTFF project
+    # colcon build
 
     # echo ">>> Testing robodog control package..."
     # colcon test
@@ -46,18 +46,18 @@ build() {
 
 clean() {
     rm -rf "$CYCLONE_WS"
-    rm -rf "$CGSS_WS"/build "$CGSS_WS"/install "$CGSS_WS"/log
+    # rm -rf "$LTFF_WS"/build "$CGSS_WS"/install "$CGSS_WS"/log
 }
 
 if  [ "$#" -eq 0 ] || { [ "$#" -eq 1 ] && [ "$1" == $CLEAN_PARAM ];}; then
-    source "./cgss_variables.sh"
+    source "./ltff_variables.sh"
     
     if [ $# -eq 0 ]; then
-        echo ">>> Building Canine Guard Project..."
+        echo ">>> Building LTFF Project..."
         build
         echo ">>> Build finished"
     else
-        echo ">>> Cleaning Canine Guard Project..."
+        echo ">>> Cleaning LTFF Project..."
         clean
         echo ">>> Clean finished"
     fi

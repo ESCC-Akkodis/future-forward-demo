@@ -2,14 +2,14 @@
 #!/bin/bash
 
 ################################################################################
-# Script name: cgss_variables.sh
+# Script name: ltff_variables.sh
 # Description: This script holds the ROS2 Canine Guard variables
-# Usage: source ./cgss_variables.sh
+# Usage: source ./ltff_variables.sh
 ################################################################################
 
 
 # ROS 2 version
-ROS_DISTRO="humble"
+ROS_DISTRO="foxy"
 
 # network interface
 NET_IF="$(ip addr | awk '/inet 192\.168\.123\./ {print $NF}' | head -n 1)"
@@ -26,8 +26,8 @@ CYCLONE_WS="cyclonedds_ws"
 # src directory for Cyclone DDS workspace
 CYCLONE_SRC="$CYCLONE_WS/src"
 
-# cgss workspace
-CGSS_WS="cgss_ws"
+# ltff workspace
+LTFF_WS="ltff_ws"
 
 # ROS2 middleware
 RMW_IMPLEMENTATION=rmw_cyclonedds_cpp

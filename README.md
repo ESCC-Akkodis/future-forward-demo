@@ -44,8 +44,8 @@ git submodule update
 
 ## Install necessary packages
 ```bash
-sudo apt install ros-humble-rmw-cyclonedds-cpp
-sudo apt install ros-humble-rosidl-generator-dds-idl
+sudo apt install ros-foxy-rmw-cyclonedds-cpp
+sudo apt install ros-foxy-rosidl-generator-dds-idl
 ```
 
 ## Initial build
